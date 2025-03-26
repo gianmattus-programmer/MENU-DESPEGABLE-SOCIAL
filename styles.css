@@ -1,0 +1,149 @@
+/* Creado por Gianmattus-Programmer */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e8e8;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle at 100% 107%,
+    #ff89cc 0%,
+    #9cb8ec 30%,
+    #00ffcc 60%,
+    #62c2fe 100%
+  );
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 7px 29px 0 
+    rgba(100, 100, 111, 0.2);
+  transition: all 1s ease-in-out;
+}
+
+.card .logo {
+  position: absolute;
+  /*   right: 20px;
+  bottom: 20px;
+  transform: translate(0, 0); */
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  font-size: 35px;
+  color: #222;
+  transition: all 0.6s ease-in-out;
+}
+
+.card:hover .logo {
+  transform: translate(0, 0);
+  right: 20px;
+  bottom: 20px;
+}
+
+.card .btn {
+  position: absolute;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: right;
+  border-right: 1px solid #fff;
+  border-top: 2px solid #fff;
+  border-radius: 10% 13% 42% 0%/
+    10% 12% 75% 0%;
+  box-shadow: -7px 7px 29px 0 
+    rgba(100, 100, 111, 0.3);
+  transform-origin: bottom left;
+  bottom: -1px;
+  left: -1px;
+  transition: all 1s ease-in-out;
+}
+
+.card:hover .btn {
+  bottom: -1px;
+  left: -1px;
+}
+
+.card .btn1 {
+  width: 70%;
+  height: 70%;
+  bottom: -70%;
+  left: -70%;
+}
+
+.card .btn2 {
+  width: 50%;
+  height: 50%;
+  bottom: -50%;
+  left: -50%;
+  transition-delay: 0.2s;
+}
+
+.card .btn3 {
+  width: 30%;
+  height: 30%;
+  bottom: -30%;
+  left: -30%;
+  transition-delay: 0.4s;
+}
+
+.card .btn::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: inherit;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.card .btn1::before {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #ff53d4 60%,
+    #62c2fe 90%
+  );
+}
+
+.card .btn:hover:before {
+  opacity: 1;
+}
+
+.card .btn2::before {
+  background: radial-gradient(
+      circle at 30% 107%, 
+      #777 0%, #222 90%);
+}
+
+.card .btn3::before {
+  background: radial-gradient(
+    circle at 30% 107%, 
+    #969fff 0%, #b349ff 90%);
+}
+
+.card .btn .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.card .btn .icon i {
+  font-size: 20px;
+  color: #222;
+  transition: all 0.5s ease-in-out;
+}
+
+.card .btn:hover .icon i {
+  color: #fff;
+  filter: drop-shadow(0 0 3px #fff);
+}
